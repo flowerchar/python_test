@@ -1,0 +1,1 @@
+记录Python生态的测试技术，包括pytest, selenium, requests
