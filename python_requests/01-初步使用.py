@@ -1,5 +1,5 @@
 import requests
-
+# from requests_xml import XMLSession
 def test_req_get():
     url = 'https://httpbin.ceshiren.com/get'
     r = requests.get(url)
