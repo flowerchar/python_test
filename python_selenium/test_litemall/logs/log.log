@@ -1,0 +1,2 @@
+[2024-06-26 21:28:30] [INFO] [test_litemall.py]/[line: 59]/[test_add_type] 添加商品类目成功 
+[2024-06-26 21:28:44] [INFO] [test_litemall.py]/[line: 70]/[test_delete_type] 删除商品类目成功 

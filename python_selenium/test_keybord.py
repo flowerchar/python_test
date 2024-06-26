@@ -56,4 +56,3 @@ class TestKeyboard:
         ActionChains(self.driver).scroll_to_element(ele).perform()
         time.sleep(10)
 
-        

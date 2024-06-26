@@ -1,0 +1,1 @@
+[32mINFO    [0m python_selenium.test_litemall.utils.log_util:test_litemall.py:70 删除商品类目成功

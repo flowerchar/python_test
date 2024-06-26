@@ -74,3 +74,18 @@
 12. !!!当调试浏览器的时候，在例如下拉框的时候，有些网站是一闪而过，如果想要留存，那么可以双击F8进入断点模式，也就是打开开发者工具Sources选项卡下，打开断点
 13. 在使用`//*[text()='管理班']`的时候可能会出错，因为html标签总是会留有几个空格，那么可能使用：`//*[contains(text(), '管理班')]`
 14. 注意当使用scroll滚动到元素可视化区域时，这些元素必须是一开始就在页面上的，而不是json动态加载出来的
+15. 如果要获取最新的窗口句柄，需要重新从 self.driver.window_handles 获取
+16. 上传文件的时候，可以定位input标签，然后使用send_keys方法，传入文件路径
+17. 封装一个截图函数:
+```python
+    def get_screen(self):
+        timestamp = int(time())
+        if not os.path.exists('./images'):
+            os.mkdir('./images')
+        image_path = f'./images/image_{timestamp}.png'
+        self.driver.save_screenshot(image_path)
+        allure.attach.file(image_path,name="picture", attachment_type=allure.attachment_type.PNG)
+        # 在一般放在断言前后调用
+        # 因为用到了allure，那么在命令行中执行：pytest -vs test_litemall.py --alluredir=./report --clean-alluredir
+        # 然后执行：allure serve ./report查看报告
+```
