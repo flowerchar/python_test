@@ -89,3 +89,8 @@
         # 因为用到了allure，那么在命令行中执行：pytest -vs test_litemall.py --alluredir=./report --clean-alluredir
         # 然后执行：allure serve ./report查看报告
 ```
+18. page_source记录
+```python
+with open("record.html", "w", encoding="u8") as f:
+     f.write(self.driver.page_source)
+```
