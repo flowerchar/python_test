@@ -4,6 +4,7 @@ import yaml
 class TestYaml:
     @pytest.mark.parametrize('env', yaml.safe_load(open('data.yml')))
     def test_demo(self, env):
+        print(env)
         if 'test' in env:
             print('这是测试环境')
             print(f"测试环境的ip是：{env['test']}")

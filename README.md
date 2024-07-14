@@ -94,3 +94,4 @@
 with open("record.html", "w", encoding="u8") as f:
      f.write(self.driver.page_source)
 ```
+19. 导出requirements.txt文件：`pip freeze > requirements.txt`
